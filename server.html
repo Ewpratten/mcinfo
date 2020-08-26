@@ -1,0 +1,78 @@
+---
+title: Server
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include head.html %}
+    <link rel="stylesheet" href="/assets/css/server.css">
+</head>
+
+<body>
+
+    {% include nav.html %}
+
+    <div class="site-ctx container">
+
+        <div style="height:20vh;"></div>
+
+        <div id="loader" class="center animate__animated animate__fadeIn">
+            <div style="height:19vh;"></div>
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border text-info" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <p class="text-secondary">Loading server (this may take a while)</p>
+            <div style="height:25vh;"></div>
+        </div>
+
+        <div id="server-info" class="card animate__animated animate__fadeIn hidden">
+            <div class="card-body">
+
+                <div class="server-header">
+                    <div class="server-img">
+
+                    </div>
+                    <div class="server-text">
+                        <h1 id="server-name">{name}</h1>
+                        <em>
+                            <h5 id="server-desc" class="grayed">{description}</h5>
+                        </em>
+                    </div>
+                </div>
+
+                <h5><span id="server-version-name" class="badge badge-success">{version}</span>&nbsp;<span
+                        id="server-players-count" class="badge badge-secondary">{x} / {y}</span></h5>
+
+                <div id="server-only-with-players" class="hidden">
+                    <hr>
+
+                    <h3>Public players:</h3>
+
+                    <div id="players-list" class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="server-not-found" class="animate__animated animate__fadeIn center hidden">
+            <h1>The requested server was not found</h1>
+            <p>Click <a href="/">here</a> to go back to search</p>
+        </div>
+
+    </div>
+
+    <!-- Control scripts -->
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/server-controller.js"></script>
+
+    {% include foot.html %}
+
+</body>
+
+</html>
