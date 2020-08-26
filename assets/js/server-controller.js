@@ -26,22 +26,26 @@ function pushServerData(name, data) {
     data.status.players.online + " / " + data.status.players.max;
 
   // Toggle the extra info based on server fillage
-  if (data.status.players.online > 0 && data.status.players.sample.length > 0) {
+  if (
+    data.status.players.online > 0 &&
+    "sample" in Object.keys(data.status.players) &&
+    data.status.players.sample.length > 0
+  ) {
     document
       .getElementById("server-only-with-players")
       .classList.remove("hidden");
-  }
 
-  // For every player, add them and their link to the list
-  document.getElementById("players-list").innerHTML = "";
-  data.status.players.sample.forEach((player) => {
-    document.getElementById("players-list").innerHTML =
-      '<a href="/player?p=' +
-      player.name +
-      '" class="list-group-item list-group-item-action">' +
-      player.name +
-      "</a>";
-  });
+    // For every player, add them and their link to the list
+    document.getElementById("players-list").innerHTML = "";
+    data.status.players.sample.forEach((player) => {
+      document.getElementById("players-list").innerHTML =
+        '<a href="/player?p=' +
+        player.name +
+        '" class="list-group-item list-group-item-action">' +
+        player.name +
+        "</a>";
+    });
+  }
 }
 
 // Show the server container
