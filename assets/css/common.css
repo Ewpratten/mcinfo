@@ -1,0 +1,16 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.heading {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}

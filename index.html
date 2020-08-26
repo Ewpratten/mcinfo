@@ -1,0 +1,80 @@
+---
+title: Home
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include head.html %}
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+
+<body>
+
+    {% include nav.html %}
+
+    <div class="site-ctx container">
+
+        <div style="height:25vh;"></div>
+
+        <div class="heading">
+            <h1>{{site.title}}</h1>
+            <p>Look up any Minecraft server or player below</p>
+        </div>
+
+        <div style="height:5vh;"></div>
+
+        <div class="search-container">
+
+            <div id="search-toggler">
+                <button id="server-select" type="button" class="btn btn-info" onclick="setSearchMode('server');">Server
+                    Lookup</button><button id="player-select" type="button" class="btn btn-light" onclick="setSearchMode('player');">Player
+                    Lookup</button>
+            </div>
+
+            <br>
+
+            <div id="server-search" class="card">
+                <div class="card-body">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="mc.example.com" aria-label="Server IP"
+                            id="server-ip">
+
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="port-addon">:</span>
+                        </div>
+                        <input type="number" class="form-control" value="25565" aria-label="Server Port"
+                            aria-describedby="port-addon" id="server-port"
+                            style="max-width:150px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="btn btn-success" onclick="search();"
+                            style="width:30%;">Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="player-search" class="card hidden">
+                <div class="card-body">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Dinnerbone" aria-label="Server IP"
+                            id="player-name">&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="btn btn-success" onclick="search();"
+                            style="width:30%;">Search</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <!-- Control scripts -->
+    <script src="/assets/js/search-panel-controller.js"></script>
+
+    {% include foot.html %}
+
+</body>
+
+</html>

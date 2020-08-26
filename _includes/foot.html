@@ -1,0 +1,53 @@
+<br><br>
+
+<div class="foot-info center">
+    Made with ♥ by <a href="https://retrylife.ca">Evan Pratten</a> | <a href="https://api.retrylife.ca/apidocs">API</a> | <a href="https://status.retrylife.ca">Status</a>
+</div>
+
+
+<!-- Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+<!-- Tracking API -->
+<script src="https://api.retrylife.ca/tracking/external/mcinfo.retrylife.ca"></script>
+
+<!-- Offsets for links -->
+<script>
+    (function ($, window) {
+        var adjustAnchor = function () {
+
+            var $anchor = $(':target'),
+                fixedElementHeight = 100;
+
+            if ($anchor.length > 0) {
+
+                window.scrollTo(0, $anchor.offset().top - fixedElementHeight);
+            }
+
+        };
+
+        $(window).on('hashchange load', function () {
+            adjustAnchor();
+        });
+
+    })(jQuery, window);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{site.ga_analytics}}"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', '{{site.ga_analytics}}');
+</script>

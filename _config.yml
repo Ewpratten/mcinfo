@@ -1,0 +1,9 @@
+title: MCInfo
+homepage: https://retrylife.ca
+description: >-
+  MCInfo is a tool for querying Minecraft servers and players
+url: "https://mcinfo.retrylife.ca"
+ga_analystics: ""
+
+plugins:
+  - jekyll-seo-tag

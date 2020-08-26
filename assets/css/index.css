@@ -1,0 +1,9 @@
+.search-container {
+    width: 100vw;
+    max-width: 800px;
+    margin: auto;
+}
+
+#search-toggler .btn {
+    width: 50%;
+}
