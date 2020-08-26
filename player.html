@@ -1,0 +1,78 @@
+---
+title: Home
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include head.html %}
+    <link rel="stylesheet" href="/assets/css/player.css">
+</head>
+
+<body>
+
+    {% include nav.html %}
+
+    <div class="site-ctx container">
+
+        <div style="height:20vh;"></div>
+
+        <div id="loader" class="center animate__animated animate__fadeIn">
+            <div style="height:19vh;"></div>
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border text-info" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <p class="text-secondary">Loading User</p>
+            <div style="height:25vh;"></div>
+        </div>
+
+        <div id="player-info" class="card animate__animated animate__fadeIn hidden">
+            <div class="card-body">
+                <div id="player-header">
+                    <!-- <div id="skinhead-wrapper">
+                    <canvas id="skinhead"></canvas>
+                </div> -->
+
+                    <div id="username-wrapper">
+                        <h1 id="player-name">{name}</h1>
+                        <em>
+                            <p id="player-uid" class="grayed">{uid}</p>
+                        </em>
+                    </div>
+                </div>
+
+                <div id="player-status">
+                    <h2>Account Status:</h2>
+                    <h5>Premium: <span id="player-premium" class="badge badge-danger">False</span></h5>
+                    <h5>Legacy: <span id="player-legacy" class="badge badge-success">False</span></h5>
+                </div>
+
+                <div >
+                    <h2>Username History:</h2>
+
+                    <ul class="list-group" id="player-history">
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="player-not-found" class="animate__animated animate__fadeIn center hidden">
+            <h1>The requested player was not found</h1>
+            <p>Click <a href="/">here</a> to go back to search</p>
+        </div>
+
+    </div>
+
+    <!-- Control scripts -->
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/player-controller.js"></script>
+
+    {% include foot.html %}
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+#player-header {
+    margin: 0;
+}
+
+#player-info{
+    max-width:800px;
+    margin:auto;
+}
+
+/* #skinhead{
+    height:100px;
+} */
+
+/* #skinhead-wrapper {
+    float: left;
+    width: 25%;
+    max-width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+#username-wrapper {
+    float: right;
+    width: 85%;
+    overflow: hidden;
+} */
