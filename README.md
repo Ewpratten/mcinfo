@@ -20,5 +20,7 @@ MCInfo is a free-to-use web tool for viewing information about any public Minecr
 ![](./assets/img/mc-search.png)
 *Search page*
 
+---
+
 ![](./assets/img/mc-user.png)
 *Player info*
